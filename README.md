@@ -7,6 +7,7 @@ This project is a web application that generates mind maps from uploaded PDF or 
 - Upload PDF or text files
 - Extract and process text to generate mind maps
 - Visualize the generated mind maps interactively
+- Adjust model parameters to customize the output
 
 ## Requirements
 
@@ -64,10 +65,26 @@ This project is a web application that generates mind maps from uploaded PDF or 
 ## How It Works
 
 - **File Upload**: Upload a PDF or text file using the sidebar.
+![File Upload](images/upload file.png)
 - **Text Extraction**: Extract text from the uploaded file. For PDFs, the text is extracted from each page.
 - **Text Splitting**: Split the extracted text into manageable chunks.
 - **Mind Map Generation**: Use the Llama2 model to generate a mind map structure based on the text chunks.
+![Mind Map Generation](images/texted -mindmap.png)
 - **Mind Map Visualization**: Draw and display the generated mind map using NetworkX and Plotly.
+![Mind Map Visualization](images/mindmap.png)
+
+## Playing with Parameters
+
+The application allows you to adjust several parameters to customize the output of the Llama2 model:
+
+- **Model Selection**: Choose between `Llama2-7B` and `Llama2-13B` models.
+- **Temperature**: Adjust the temperature to control the randomness of the model's output. A higher temperature makes the output more random, while a lower temperature makes it more deterministic.
+- **Top P**: Set the top-p value to use nucleus sampling. This parameter controls the cumulative probability for token selection.
+- **Max Length**: Specify the maximum length of the generated response.
+
+You can adjust these parameters using the sliders and dropdowns in the sidebar.
+
+![Parameters](images/sidebar.png)
 
 ## Project Structure
 
@@ -90,4 +107,3 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 - [PyPDF2](https://pypdf2.readthedocs.io/)
 - [NetworkX](https://networkx.github.io/)
 - [Plotly](https://plotly.com/python/)
-
