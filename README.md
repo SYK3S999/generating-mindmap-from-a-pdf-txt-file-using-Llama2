@@ -65,11 +65,11 @@ This project is a web application that generates mind maps from uploaded PDF or 
 ## How It Works
 
 - **File Upload**: Upload a PDF or text file using the sidebar.
-![File Upload](images/upload file.png)
+![File Upload](images/upload_file.png)
 - **Text Extraction**: Extract text from the uploaded file. For PDFs, the text is extracted from each page.
 - **Text Splitting**: Split the extracted text into manageable chunks.
 - **Mind Map Generation**: Use the Llama2 model to generate a mind map structure based on the text chunks.
-![Mind Map Generation](images/texted -mindmap.png)
+![Mind Map Generation](images/texted_mindmap.png)
 - **Mind Map Visualization**: Draw and display the generated mind map using NetworkX and Plotly.
 ![Mind Map Visualization](images/mindmap.png)
 
